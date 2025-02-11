@@ -20,16 +20,15 @@
 
         let rs1 = num1 + num2;
         let rs2 = num1 - num2;
-        let rs3 = num1 * num2;
-        let rs4 = num1 / num2;
-        let rs5 = num1 % num2;
+        let rs3 = num2 * num3;
+        let rs4 = num4 / num2;
+        let rs5 = num4 % num3; // 나머지
 
         document.write('rs1 : ' + rs1 + '<br>');
         document.write('rs2 : ' + rs2 + '<br>');
         document.write('rs3 : ' + rs3 + '<br>');
         document.write('rs4 : ' + rs4 + '<br>');
         document.write('rs5 : ' + rs5 + '<br>');
-
     </script>
 
     <h4>복합대입연산자</h4>
@@ -91,18 +90,18 @@
         let num = 10;
         let str = '10';
 
-        let result1 = num == str; //값이 같음 -> true
-        let result2 = num === str; //값이 같지만 타입은 다름 -> false
+        let result1 = num == str;  // 값이 같음 -> true
+        let result2 = num === str; // 값은 같지만 타입은 다름 -> false
 
         let result3 = 0 == false;
         let result4 = 0 === false;
-
 
         document.write('result1 : ' + result1 + '<br>');
         document.write('result2 : ' + result2 + '<br>');
         document.write('result3 : ' + result3 + '<br>');
         document.write('result4 : ' + result4 + '<br>');
     </script>
+
     
 </body>
 </html>
