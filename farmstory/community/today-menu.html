@@ -119,21 +119,37 @@
         position: absolute;
         width: 175px;
         height: 233px;
-        background-image: url("../images/sub_aside_bg_lnb.png");
+        background-image: url("/images/sub_aside_bg_lnb.png");
         top: 81px;
         right: 1px; /*임의 설정값*/
+        padding-top: 30px;
+        box-sizing: border-box;
     }
     main aside .list li {
-        position: absolute;
         width: 175px;
-        height: 26px;
+        height: 28px;
+        margin-bottom: 6px;
     }
+
+    main aside .list li > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+    }
+
     /*====================*/
-    main aside .list li:nth-child(1) {background-image: url("../images/sub_cate5_lnb1.png"); top: 26px;}
-    main aside .list li:nth-child(2) {background-image: url("../images/sub_cate5_lnb2_ov.png"); top: 61px;}
-    main aside .list li:nth-child(3) {background-image: url("../images/sub_cate5_lnb3.png"); top: 96px;}
-    main aside .list li:nth-child(4) {background-image: url("../images/sub_cate5_lnb4.png"); top: 131px;}
-    main aside .list li:nth-child(5) {background-image: url("../images/sub_cate5_lnb5.png"); top: 166px;}
+    main aside .list li:nth-child(1) > a{background-image: url("../images/sub_cate5_lnb1.png");}
+    main aside .list li:nth-child(1) > a:hover{background-image: url("../images/sub_cate5_lnb1_ov.png");}
+    main aside .list li:nth-child(2) > a{background-image: url("../images/sub_cate5_lnb2_ov.png");}
+    main aside .list li:nth-child(2) > a:hover{background-image: url("../images/sub_cate5_lnb2_ov.png");}
+    main aside .list li:nth-child(2).on > a{background-image: url("../images/sub_cate5_lnb2_ov.png");}
+    main aside .list li:nth-child(3) > a{background-image: url("../images/sub_cate5_lnb3.png");}
+    main aside .list li:nth-child(3) > a:hover{background-image: url("../images/sub_cate5_lnb3_ov.png");}
+    main aside .list li:nth-child(4) > a{background-image: url("../images/sub_cate5_lnb4.png");}
+    main aside .list li:nth-child(4) > a:hover{background-image: url("../images/sub_cate5_lnb4_ov.png");}
+    main aside .list li:nth-child(5) > a{background-image: url("../images/sub_cate5_lnb5.png");}
+    main aside .list li:nth-child(5) > a:hover{background-image: url("../images/sub_cate5_lnb5_ov.png");}
     /*====================*/
     main > .main_btm > article {
         position: relative;
@@ -213,6 +229,7 @@
         right: 0px;
         top: 23px;
         
+        
     }
 
     .submit {
@@ -289,6 +306,9 @@ height: 51.5px;
 left: 0px;
 top: calc(50% - 51.5px/2 - 199.5px);
 
+
+border-top: 2px solid #111111;
+
         }
         
         .form-group1 > label {
@@ -302,6 +322,8 @@ top: calc(50% - 51px/2 + 0.75px);
 
 background: #F5F8F9;
 border-bottom: 1px solid #E9E9E9;
+border-top: 2px solid #111111;
+
         }
 
         .form-group1 > label > span {
@@ -331,8 +353,10 @@ width: 650px;
 height: 51.5px;
 left: 112px;
 top: calc(50% - 51.5px/2);
-
+border-top: 2px solid #111111;
 border-bottom: 0.5px solid #E9E9E9;
+border-left:  0.5px solid #E9E9E9;
+border-right:  0.5px solid #E9E9E9;;
 
         }
 
@@ -354,7 +378,7 @@ left: 0px;
 top: calc(50% - 305px/2);
 
 background: #F5F8F9;
-border-bottom: 1px solid #E9E9E9;
+border: 1px solid #E9E9E9;
         }
 
         .form-group2 >label >span {
@@ -386,7 +410,7 @@ left: 112px;
 top: calc(50% - 305px/2);
 
 
-border-bottom: 1px solid #E9E9E9;
+border: 1px solid #E9E9E9;
         }
 
 
@@ -399,6 +423,7 @@ width: 762px;
 height: 94px;
 left: 0px;
 top: calc(50% - 94px/2 + 178.25px);
+border:  0.5px solid #E9E9E9;
         }
         
         .form-group3 > label:nth-of-type(1) {
@@ -472,6 +497,7 @@ width: 400px;
 height: 24px;
 left: 10px;
 top: 33.5px;
+
         }
         .form-group3 > label:nth-of-type(2) > input:nth-of-type(2) {
             position: absolute;
@@ -549,11 +575,11 @@ top: 59.5px;
         <span class="home">
             <a href="#">HOME</a>&thinsp;|&thinsp;
             <a href="#">로그인</a>&thinsp;|&thinsp;
-            <a href="#"></a>회원가입</a>&thinsp;|&thinsp;
-            <a href="#"></a>나의정보</a>&thinsp;|&thinsp;
-            <a href="#"></a>로그아웃</a>&thinsp;|&thinsp;
-            <a href="#"></a>관리자</a>&thinsp;|&thinsp;
-            <a href="#"></a>고객센터</a>
+            <a href="#">회원가입</a>&thinsp;|&thinsp;
+            <a href="#">나의정보</a>&thinsp;|&thinsp;
+            <a href="#">로그아웃</a>&thinsp;|&thinsp;
+            <a href="#">관리자</a>&thinsp;|&thinsp;
+            <a href="#">고객센터</a>
         </span>
         <nav>
             <div class="nav_item">
@@ -591,11 +617,11 @@ top: 59.5px;
                 <img src="../images/sub_aside_bg_line.png" alt="목록선">
                 <div class="list">
                         <ul>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li class="on"><a href="#">오늘의식단</a></li>
+                            <li><a href="#">나도요리사</a></li>
+                            <li><a href="#">1:1고객문의</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
                         </ul>
                 </div>
             </aside>
