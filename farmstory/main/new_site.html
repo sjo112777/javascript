@@ -3,39 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>찾아오시는길</title>
+    <title>new_site</title>
 
     <link rel="stylesheet" href="../css/_header.css">
     <link rel="stylesheet" href="../css/_footer.css">
 
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KAKAO_API_KEY"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var mapContainer = document.getElementById('map'), 
-            mapOption = { 
-                center: new kakao.maps.LatLng(33.450701, 126.570667), 
-                level: 3 
-            };
-            var map = new kakao.maps.Map(mapContainer, mapOption); 
-            var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
-            var marker = new kakao.maps.Marker({
-                position: markerPosition
-            });
-            marker.setMap(map);
-        });
-    </script>
-    
   <style>
     main {
         width: 100%;
         height: auto; /*수정*/
-        margin: 10px 0;
+        margin: 0 auto;
     }
 
     main > .main_top {
         position: relative;
-        width: 100%; 
+        width: 100%;
         height: 184px;
         background-image: url("../images/sub_top_bg.jpg");
     }
@@ -48,7 +30,7 @@
 
     main > .main_btm {
         width: 100%;
-        min-height: 743px;
+        height: auto;
         display: flex;
     }
 
@@ -86,13 +68,14 @@
     }
 
     main aside .list > a:nth-child(1) > img {margin-top: 26px;}
-
+    
+    /*수정*/
     main .list > a:nth-child(1) > img:hover {background-image:url("../images/sub_cate1_lnb1_ov.png");}
-
+   
     main > .main_btm > article {
         position: relative;
         width: 802px;
-        min-height: 743px;
+        min-height: 920.75px;
     }
 
     main > .main_btm > article > nav {
@@ -120,26 +103,7 @@
     main > .main_btm .nav_menu > img {width: 5px; height: 5px; margin: 6px;}
     main > .main_btm .nav_menu > p {color: #8c8c8c;}
     main > .main_btm .nav_menu span {color: #91BA15;}
-
-    main > .main_btm .content {
-        margin-left: 40px;
-        margin-top: 113px;
-    }
-
-    main > .main_btm .content > span {
-        font-weight: 700;
-        color: #91BA15;
-    }
-
-    main > .main_btm .content > p {color: #8c8c8c;}
-
-    .point {margin-top: 10px;}
-
-    #daumRoughmapContainer1740384680358 {
-        width: 500px;
-        height: 500px;
-    }
-   
+    
   </style>
 </head>
 <body>
@@ -169,7 +133,7 @@
                 </div>
                 <div>
                     <img src="../images/head_menu_line.png" class="line" alt="메뉴 선">
-                    <a href="/stories/farm-stories.html"><img src="../images/head_menu3.png" alt="농작물이야기"></a>
+                    <a href="../stories/farm-stories.html"><img src="../images/head_menu3.png" alt="농작물이야기"></a>
                 </div>
                 <div>
                     <img src="../images/head_menu_line.png" class="line" alt="메뉴 선">
@@ -181,38 +145,29 @@
                 </div>
             </nav>
         </header>
-
         <main>
             <section class="main_top">
                 <img src="../images/sub_top_tit1.png" alt="introduction">
             </section>
             <section class="main_btm">
                 <aside>
-                    <img src="../images/sub_aside_cate1_tit.png" alt="팜스토리소개">
+                    <img src="../images/sub_aside_cate2_tit.png" alt="장보기">
                     <img src="../images/sub_aside_bg_line.png" alt="목록선">
-                    <div class="list">
+                    <div class="list"> <!--수정-->
                         <a href="../home/greeting.html"><img src="../images/sub_cate1_lnb1.png" alt="인사말"></a>
                         <a href="../home/directions.html"><img src="../images/sub_cate1_lnb2_ov.png" alt="찾아오시는길"></a>
                     </div>
                 </aside>
                 <article>
                     <nav>
-                        <img src="../images/sub_nav_tit_cate1_tit2.png" alt="찾아오시는길">
+                        <img src="../images/sub_nav_tit_cate2_tit1.png" alt="장보기">
                         <div class="nav_menu">
                             <img src="../images/sub_page_nav_ico.gif" alt="#">
-                            <p>HOME > 팜스토리소개 > <span>찾아오시는길</span></p>
+                            <p>HOME > 팜스토리소개 > <span>인사말</span></p> <!--수정-->
                         </div>
                     </nav>
-                    <div class="content">
-                        <span>팜스토리</span>
-                        <p>
-                            주소: 경기도 이천시 잘한다구 신난다동 123<br>
-                            전화: 01-234-567
-                        </p>
-                        <span class="point">찾아오시는길</span>
-                        <div id="daumRoughmapContainer1740384680358" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-                    </div>
-                </article>  
+                    
+                 </article>   
             </section>
         </main>
         <footer>
@@ -228,13 +183,4 @@
         </footer>
     </div>
 </body>
-<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-<script charset="UTF-8">
-	new daum.roughmap.Lander({
-		"timestamp" : "1740384680358",
-		"key" : "2n5rj",
-		"mapWidth" : "640",
-		"mapHeight" : "360"
-	}).render();
-</script>
 </html>
