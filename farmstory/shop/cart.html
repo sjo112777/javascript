@@ -2,496 +2,307 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>장바구니</title>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: 'Inter' sans-serif;
-    }
-    ul, ol {list-style: none;}
-    a {text-decoration: none; color: #111;}
-    header {
-        position: relative;
-        width: 980px;
-        height: 142px;
-        margin:0 auto;
-        
-    }
-    header > img:nth-child(1) {
-        position: absolute;
-        top: 20px;
-        left: 395px;
-    }
-    header > img:nth-child(2) {
-        position: absolute;
-        top: 59px;
-        left: 751px;
-    }
-    header > .home {
-        position: absolute;
-        top: 17px;
-        left: 630.23px;
-        display: flex;
-        justify-content: space-between;
-        font-weight: 400;
-        font-size: 12px;
-        box-sizing: border-box;
-    }
-    header > nav {
-        position: absolute;
+
+    <link rel="stylesheet" href="../css/_header.css">
+    <link rel="stylesheet" href="../css/_footer.css">
+
+  <style>
+    main {
         width: 100%;
-        height: 50px;
-        top: 92px;
-        display: flex;
-        padding: 0 1px; /*임의 설정값*/
-        box-sizing: border-box;
-    }
-    .nav_item {
-        position: relative;
-        width: 196px;
-        height: 50px;
-        margin-left: 3px;
-    }
-    .nav_item > img {
-        position: absolute;
-        margin-top: -5px; /*임의 설정값*/
-    }
-    .nav_item > a{
-        display: block;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        line-height: 50px;
-        font-weight: bold;
+        height: auto; /*수정*/
+        margin: 0 auto;
     }
 
-    .nav_item > ul{
-        position: absolute;
-        display: block;
-        width: 50%;
-        height: 100%;
-        bottom: 17px;
-        left: 95px;
-    }
-   
-   
-    .Background {
+    main > .main_top {
         position: relative;
-        width: 980px;
+        width: 100%;
         height: 184px;
-        margin : 0 auto;
+        background-image: url("../images/myinfo/myinfo_top_bg.jpg");
     }
 
-    .Background > .background-image {
-        display: block;
-    }
-
-    .Background > .overlay-image {
+    main > .main_top > img {
         position: absolute;
         top: 137px;
         left: 10px;
-        width: 186px;
-        height: 37px;
-        opacity: 0.8;   /* 투명도 조절 */
     }
 
-    .main > div> aside {
+    main > .main_btm {
+        width: 100%;
+        height: auto;
+        display: flex;
+    }
+
+    main > .main_btm > aside {
         position: relative;
-        float: left;
         width: 176px;
         height: 650px;
     }
 
-    .main > div > aside > .aside_image1 {
+    main > .main_btm > aside > img:nth-child(1) {
         position: absolute;
-        width: 103px;
-        height: 45px;
         top: 16px;
         left: 16px;
-        
     }
 
-    .main > div > aside > .shopping_list {
+    main > .main_btm > aside > img:nth-child(2) {
         position: absolute;
-        top : 80px;
+        top: 40px;
+        right: 0px;
     }
 
-    .main > div > aside > .shopping_list > .aside_image2 {
+    main aside .list {
+        position: absolute;
+        top: 81px;
+        right: 1px;
         width: 175px;
         height: 233px;
+        background-image: url("../images/sub_aside_bg_lnb.png");
     }
 
-    .main > div > aside > .shopping_list > .aside_image3 {
-        position: absolute;
+    main aside .list > a > img {
         width: 175px;
         height: 29px;
-        top: 25px;
-        left: 0px;
-
+        margin-top: 5px;
     }
 
-    .main > div > aside >  .aside_image4 {
-        position: absolute;
-        top: 16px;
-        left: 169px;
-    }
-    
+    main aside .list > a:nth-child(1) > img {margin-top: 26px;}
 
+    main .list > a:nth-child(2) > img:hover {background-image:url("../images/myinfo/myinfo_menu2_ov.png");}
+    main .list > a:nth-child(3) > img:hover {background-image:url("../images/myinfo/myinfo_menu3_ov.png");}
 
-    .main {
+    main > .main_btm > article {
         position: relative;
-        width: 980px;
-        height: 743px;
-        margin: 0 auto;
-    }
-
-    
-
-    .main > div > article {
-        float: right;
         width: 802px;
-        height: 743px;
+        min-height: 747px;
     }
 
-    .main > div > article > nav {
+    main > .main_btm > article > nav {
         position: absolute;
+        left: 40px;
         width: 762px;
         height: 72px;
-        margin-left: 40px;
+        border-bottom: 1px solid #C2C2C2;
+        box-sizing: border-box;
+        margin-bottom: 20px;
     }
 
-    .main > div > article > nav > .nav_image1 {
+    main > .main_btm nav > img {
         position: absolute;
-        top: 43px;
-        
+        top: 41px;
     }
 
-    .main > div > article > nav > .hierarchy_box {
+    main > .main_btm .nav_menu {
         position: absolute;
-        width: 152.88px;
-        height: 17px;
+        right: 0px;
         top: 50px;
-        margin-left: 609.13px;
-        
+        display: flex;
     }
 
-    .main > div > article > nav > .hierarchy_box > .nav_hierarchy {
-        font-size: 12px;
-        
-    }
+    main > .main_btm .nav_menu > img {width: 5px; height: 5px; margin: 6px;}
+    main > .main_btm .nav_menu > p {color: #8c8c8c;}
+    main > .main_btm .nav_menu span {color: #91BA15;}
 
-    .main > div > article > nav > .hierarchy_box > .nav_hierarchy > .nav_hierarchy_text {
-        color : #b0cf50;
-        
-    }
-    
 
-    .main > div > article > nav >  .nav_image3{
-        position: absolute;
-        top: 72px;
-        width: 762px;
-        
-    }
-   
-    .main > div > article > .count {
-        position: absolute;
-        top : 113px;
+    main > .main_btm .content {
+        margin-top: 113px;
         margin-left: 40px;
-        font-size: 12px;
+        margin-top: 113px;
     }
 
-    .main > div > article > .cart-table {
-        position: absolute;
+    main > .main_btm .content > table {
+        margin-top: 10px;
         width: 762px;
-        height: 200px;
-        top: 139px;
-        margin-left: 40px;
-        text-align: center;
-        border-top: 1px solid #111;
-        border-bottom: 1px solid #111;
+        height: 332px;
         border-collapse: collapse;
         box-sizing: border-box;
-
     }
 
-    .main > div > article > .cart-table th , .cart-table td {
+    main > .main_btm .content > table td, th {
+        height: 85px;
+        border-top: 1px solid #EEE;
         border-bottom: 1px solid #EEE;
-        box-sizing: border-box;
+        text-align: center;
+        color: #777;
+        padding-left: 18px;
     }
 
-    .cart-table > thead > .cart-table-header-1 {
-        width: auto;
+    main > .main_btm .content th {
         height: 38px;
-        font-size: 12px;
-        text-align: center;
         color: #000;
         background-color: #E5ECEF;
+        border-top: 1px solid #111;
     }
 
-    .empty-cart-header {
-        color : #777777;
-    }
-    .main > div > article > .cart-table > tbody > tr > td:nth-of-type(2) > img{ width: 80px ; }
-    .main > div > article > .cart-table > tbody > tr > td:nth-of-type(3) > { width: 80px ; }
-    .main > div > article > .cart-table > tbody > tr > td:nth-of-type(4) > { width: 80px ; }
-    .main > div > article > .cart-table > tbody > tr > td:nth-of-type(5) > { width: 80px ; }
-    .main > div > article > .cart-table > tbody > tr > td:nth-of-type(6) > { width: 80px ; }
-    .main > div > article > .cart-table > tbody > tr > td:nth-of-type(7) > { width: 80px ; }
-        
+    main .content > table tr:nth-of-type(2) > td {height: 38px;}
+    main .content > table .sample {width: 60px; height: 60px;}
+    main .content > table td:nth-of-type(4) {color: #000;}
+    main .content > table .point {color: #000; font-weight: 700;}
+    main .content > table tr:nth-of-type(5) > td {border-bottom: 1px solid #111;}
 
-    .delete_btn_1 {
-        position: absolute;
-        background-color: #960D1A;
-        top: 481px;
+    main .main_btm > article > .remove_btn {
+        margin-top: 10px;
         margin-left: 40px;
         width: 60px;
         height: 29px;
-        color : white;
+        background-color: #960D1A;
+        color: #FFF;
     }
-    
 
-    article > .border {
+    main article .order {
         position: absolute;
-        top: 462px;
-        margin-left: 496px;
-        border: 1px solid #ccc;
-        background-color: white;
-        text-align: center;
+        right: 1px;
+        margin-top: 10px;
         width: 304.8px;
-        height: 280px;
+        height: 262px;
+        border: 1px solid #D7d7d7;
+        box-sizing: border-box;
+        padding: 7px;
     }
 
-    article > .border > h2 {
-        margin-bottom: 10px;
-        font-size: 18px;
-        border-bottom : 2px solid black;
-
-    }
-
-
-
-    article > .border > .border_table {
-        width : 100%;
-        border-collapse: collapse;
-        margin-bottom: 5px;
-    }
-
-    .border_table > tbody > tr > td{
-        padding : 6px;
-        text-align: left;
-    }
-
-   
-
-    article > .border > .border_table > tbody tr:last-child td{
-        border-bottom : 2px solid black;
-    }
-
-
-
-    .border_table > tbody > tr > .total  {
-        color : red;
-    }
-
-    .border_btn {
-    width: 100%;
-    background-color: #a00000;
-    margin-top: 5px;
-    color: white;
-    padding: 6px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-  
-    footer {
-        position: relative;
-        width: 980px;
-        height: 120px;
-        margin: 0 auto;
-        border-top: 3px solid #DCDCDC; /*임의 설정값*/
+    main article .order > table {
+        width: 290.8px;
+        height: 201px;
+        border-top: 1px solid #111;
+        border-bottom: 1px solid #111;
         box-sizing: border-box;
     }
-    footer > img {
-        position: absolute;
-        top: 1px;
-    }
-    footer > div {
-        position: absolute;
-        width: 709.48px;
-        height: 71px;
-        top: 27px;
-        left: 254.52px;
-    }
-    footer > div > p {
-        font-weight: 400;
-    }
-    footer > div > .farmstory {
-        width: 100%;
-        height: 48px;
-        position: absolute;
-        top: 3px;
-        font-size: 10.31px;
-        line-height: 18px;
-        color: #585858;
-    }
-    footer > div > .copyright {
-        width: 272.5px;
-        height: 14px;
-        position: absolute;
-        top: 55px;
-        font-size: 11.06px;
-        line-height: 13.39px;
-        color: #888;
-    }
-    footer > div > .ver {
-        width: 89.18px;
-        height: 14px;
-        position: absolute;
-        top: 54px;
-        left: 620.5px;
-        font-size: 10.69px;
-        line-height: 12.93px;
-        color: #888;
+    
+    main article .order > table tr:nth-of-type(1) > td {text-align: center;}
+    main article .order > table  td, th {padding-left: 15px;}
+    main article .order > table .point {color: #c20A0A; font-weight: 700;}
+
+    main article .order > .order_btn {
+        width: 290.8px;
+        height: 37px;
+        margin-top: 7px;
+        background-color: #960D1A;
+        color: #fff;
     }
 
-    
-</style>
+    button{border: none;}
+
+  </style>
 </head>
 <body>
-    <header>
-        <img src="../images/logo.png" alt="로고사진" >
-        <img src="../images/head_txt_img.png" alt="무료배송" >
-        <span class="home">
-            <a href="#">HOME</a>&thinsp;|&thinsp;
-            <a href="#">로그인</a>&thinsp;|&thinsp;
-            <a href="#">회원가입</a>&thinsp;|&thinsp;
-            <a href="#">나의정보</a>&thinsp;|&thinsp;
-            <a href="#">로그아웃</a>&thinsp;|&thinsp;
-            <a href="#">관리자</a>&thinsp;|&thinsp;
-            <a href="#">고객센터</a>
-        </span>
-        <nav>
-            <div class="nav_item">
-                <img src="../images/head_menu_line.png" alt="item">
-                <a href="#">팜스토리소개</a>
-            </div>
-            <div class="nav_item">
-                <img src="../images/head_menu_line.png" alt="item">
-                <ul>
-                    <img src="../images/head_menu_badge.png" alt="item">
-                </ul>
-                <a href="#">장보기</a>
-            </div>
-            <div class="nav_item">
-                <img src="../images/head_menu_line.png" alt="item">
-                <a href="#">농작물이야기</a>
-            </div>
-            <div class="nav_item">
-                <img src="../images/head_menu_line.png" alt="item">
-                <a href="#">이벤트</a>
-            </div>
-            <div class="nav_item">
-                <img src="../images/head_menu_line.png" alt="item">
-                <a href="#">커뮤니티</a>
-            </div>
-        </nav>
-    </header>
-
-    <section class="Background"> 
-            <img src="../images/sub_top_bg.jpg" alt="메인이미지" class="background-image">
-            <img src="../images/sub_top_tit2.png" alt="마켓로고" class="overlay-image">
-    </section>
-
-
-
-    <section class="main">
-        <div>
-            <aside>
-                <img src="../images/sub_aside_cate2_tit.png" class="aside_image1">
-                <div class="shopping_list">
-                    <img src="../images/sub_aside_bg_lnb.png" class="aside_image2">
-                    <img src="../images/sub_cate2_lnb1_ov.png" class="aside_image3">
+    <div id="wrapper">
+        <header>
+            <img src="../images/head_top_line.png" alt="헤더 선">
+            <a href="../main/main.html"><img src="../images/logo.png" class="header_logo" alt="로고사진"></a>
+            <img src="../images/head_txt_img.png" alt="무료배송">
+            <span class="home">
+                <a href="../main/main.html">HOME</a>&thinsp;|&thinsp;
+                <a href="../users/login.html">로그인</a>&thinsp;|&thinsp;
+                <a href="../users/singup.html">회원가입</a>&thinsp;|&thinsp;
+                <a href="../profile/cart.html">나의정보</a>&thinsp;|&thinsp;
+                <a href="../main/main.html">로그아웃</a>&thinsp;|&thinsp;
+                <a href="../admin-dashboard/dashboard.html">관리자</a>&thinsp;|&thinsp;
+                <a href="#">고객센터</a>&thinsp;
+            </span>
+            <nav class="menu">
+                <div>
+                    <img src="../images/head_menu_line.png" class="line" alt="메뉴 선">
+                    <a href="../home/greeting.html"><img src="../images/head_menu1.png" alt="팜스토리 소개"></a>
+                </div>
+                <div>
+                    <img src="../images/head_menu_line.png" class="line" alt="메뉴 선">
+                    <img src="../images/head_menu_badge.png" alt="30%">
+                    <a href="../shop/product-list.html"><img src="../images/head_menu2.png" alt="장보기"></a>
+                </div>
+                <div>
+                    <img src="../images/head_menu_line.png" class="line" alt="메뉴 선">
+                    <a href="../stories/farm-stories.html"><img src="../images/head_menu3.png" alt="농작물이야기"></a>
+                </div>
+                <div>
+                    <img src="../images/head_menu_line.png" class="line" alt="메뉴 선">
+                    <a href="../events/event-calendar.html"><img src="../images/head_menu4.png" alt="이벤트"></a>
+                </div>
+                <div>
+                    <img src="../images/head_menu_line.png" class="line" alt="메뉴 선">
+                    <a href="../community/notices.html"><img src="../images/head_menu5.png" alt="커뮤니티"></a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="main_top">
+                <img src="../images/myinfo/myinfo_top_tit.png" alt="my info">
+            </section>
+            <section class="main_btm">
+                <aside>
+                    <img src="../images/myinfo//myinfo_menu_tit.png" alt="나의정보">
+                    <img src="../images/sub_aside_bg_line.png" alt="목록선">
+                    <div class="list">
+                        <a href="../profile/cart.html"><img src="../images/myinfo/myinfo_menu1_ov.png" alt="장바구니"></a>
+                        <a href="../profile/order-history.html"><img src="../images/myinfo/myinfo_menu2.png" alt="주문내역"></a>
+                        <a href="../profile/update-info.html"><img src="../images/myinfo/myinfo_menu3.png" alt="정보수정"></a>
                     </div>
-                    <img src="../images/sub_aside_bg_line.png" class="aside_image4">
-                
-                   
-            </aside>
-            <article>
-                <nav>
-                    <img src="../images/sub_nav_tit_cate2_tit1.png" class="nav_image1">
-                    <div class="hierarchy_box">
-                        <img src="../images/sub_page_nav_ico.gif" class="nav_image2" >
-                        <span class="nav_hierarchy" >HOME > 장보기 > <span class="nav_hierarchy_text">장보기</span></span>
+                </aside>
+                <article>
+                    <nav>
+                        <img src="../images/sub_nav_tit_cate2_tit1.png" alt="장보기">
+                        <div class="nav_menu">
+                            <img src="../images/sub_page_nav_ico.gif" alt="#">
+                            <p>HOME > 나의정보 > <span>장바구니</span></p>
+                        </div>
+                    </nav>
+                    <div class="content">
+                        <p>장바구니 전체(10)</p>
+                        <table>
+                                <tr>
+                                    <th><input type="checkbox"></th>
+                                    <th>이미지</th>
+                                    <th>종류</th>
+                                    <th>상품명</th>
+                                    <th>수량</th>
+                                    <th>할인</th>
+                                    <th>포인트</th>
+                                    <th>가격</th>
+                                    <th>소계</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="9" class="empty">장바구니에 상품이 없습니다</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><img src="../images/market_item1.jpg" class="sample" alt="사과"></td>
+                                    <td>과일</td>
+                                    <td>사과 500g</td>
+                                    <td>1</td>
+                                    <td>10%</td>
+                                    <td>40P</td>
+                                    <td>4,000원</td>
+                                    <td><span class="point">3,600</span>원</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><img src="../images/market_item1.jpg" class="sample" alt="사과"></td>
+                                    <td>과일</td>
+                                    <td>사과 500g</td>
+                                    <td>1</td>
+                                    <td>10%</td>
+                                    <td>40P</td>
+                                    <td>4,000원</td>
+                                    <td><span class="point">3,600</span>원</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><img src="../images/market_item1.jpg" class="sample" alt="사과"></td>
+                                    <td>과일</td>
+                                    <td>사과 500g</td>
+                                    <td>1</td>
+                                    <td>10%</td>
+                                    <td>40P</td>
+                                    <td>4,000원</td>
+                                    <td><span class="point">3,600</span>원</td>
+                                </tr>
+                        </table>
                     </div>
-                   <img src="../images/main_cs_top_line.png" class="nav_image3">
-                    
-                </nav>
-                <span class="count">장바구니 전체(10)</span>
-                    
-                <table class="cart-table">
-                    <thead>
-                        <tr class="cart-table-header-1">
-                            <th><input type="checkbox"></th>
-                            <th>이미지</th>
-                            <th>종류</th>
-                            <th>상품명</th>
-                            <th>수량</th>
-                            <th>할인</th>
-                            <th>포인트</th>
-                            <th>가격</th>
-                            <th>소계</th>
-                        </tr>
-                        <tr>
-                            <th colspan="9" class="empty-cart-header">장바구니에 상품이 없습니다</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td><img src="../images/market_item1.jpg" ></td>
-                            <td>과일</td>
-                            <td>사과 500g</td>
-                            <td>1</td>
-                            <td>10%</td>
-                            <td>40P</td>
-                            <td>4,000원</td>
-                            <td class="total-price">3,600원</td>
-                        </tr>
-
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td><img src="../images/market_item1.jpg"></td>
-                            <td>과일</td>
-                            <td>사과 500g</td>
-                            <td>1</td>
-                            <td>10%</td>
-                            <td>40P</td>
-                            <td>4,000원</td>
-                            <td class="total-price">3,600원</td>
-                        </tr>
-
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td><img src="../images/market_item1.jpg"></td>
-                            <td>과일</td>
-                            <td>사과 500g</td>
-                            <td>1</td>
-                            <td>10%</td>
-                            <td>40P</td>
-                            <td>4,000원</td>
-                            <td class="total-price">3,600원</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button class="delete_btn_1">선택삭제</button>
-                
-                <div class="border">
-                    <table class="border_table">
-                        <h2>전체합계</h2>
-                        <tbody>
+                    <div class="order">
+                        <table>
+                            <tr>
+                                <td colspan="2">전체합계</td>
+                            </tr>
                             <tr>
                                 <td class="a">상품수</td>
                                 <td>1</td>
@@ -512,36 +323,28 @@
                                 <td>포인트</td>
                                 <td>4,000</td>
                             </tr>
-                            <tr >
+                            <tr>
                                 <td>전체주문금액</td>
-                                <td class="total">22,000</td>
+                                <td class="point">22,000</td>
                             </tr>
-                        </tbody>
-                    </table>
-                    <button class="border_btn">주문하기</button>
-                </div>
-            </article>
-        </div>
-        
-    </section>
-
-    
-
-
-    <footer>
-        <img src="../images/footer_logo.png">
-        <div>
-            <p class="farmstory">(주)팜스토리 / 사업자등록번호 123-45-67890 / 통신판매업신고 제 2013-부산진구-123호 / 벤처기업확인 서울지방중소기업청 제 012345678-9-01234호</br>
+                        </table>
+                        <button type="submit" class="order_btn">주문하기</button>
+                    </div>
+                    <button type="submit" class="remove_btn">선택삭제</button>
+                 </article>   
+            </section>
+        </main>
+        <footer>
+            <img src="../images/footer_top_line.png" alt="footer_line">
+            <img src="../images/footer_logo.png" alt="footer_logo">
+            <p class="paragraph">
+                (주)팜스토리 / 사업자등록번호 123-45-67890 / 통신판매업신고 제 2013-부산진구-123호 / 벤처기업확인 서울지방중소기업청 제 012345678-9-01234호</br>
                 등록번호 팜스토리01234 (2013.04.01) / 발행인 : 홍길동</br>
-                대표 : 김철학 / 이메일 : chhak0503@gmail.com / 전화 : 01) 234-5678 / 부산광역시 부산진구 부전동 123
+                대표 : 김철학 / 이메일 : chhak0503@gmail.com / 전화 : 01) 234-5678 / 부산광역시 부산진구 부전동 123<br>
+                <span class="copyright">김철학(개발에반하다) All rights reserved.</span> 
             </p>
-            <p class="copyright">
-                copyrightⓒ 김철학(개발에반하다) All rights reserved.
-            </p>
-            <p class="ver">
-                farmstory ver1.0.1
-            </p>
-        </div>
-    </footer>
+            <p class="version">farmstory ver1.0.1</p>
+        </footer>
+    </div>
 </body>
 </html>
