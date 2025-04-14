@@ -1,0 +1,26 @@
+.main_content_detail > table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    
+}
+
+.main_content_detail > table tr {}
+.main_content_detail > table > caption {
+
+}
+
+
+
+
+.main_content_detail > table tr > td {
+    width: auto;
+    padding: 18px;
+    border-bottom: 1px solid #d8d8d8;
+    line-height: 1.6;
+
+}
+
+.main_content_detail > table tr > td > span {color: #808080; font-size: 14px; }
+
